@@ -22,7 +22,7 @@ from accounts import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('app/accounts/login/', views.login),
+    path('', views.qrCode),
     path('api/accounts/login/', include('rest_auth.urls')),
     path('api/accounts/registration/', include('rest_auth.registration.urls'))
 ] + static(settings.STATIC_URL, document_root=settings.STATICS_DIRS) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
